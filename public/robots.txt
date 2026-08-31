@@ -1,0 +1,13 @@
+# ZenAlpha Media — https://zenalphamedia.com
+
+User-agent: *
+Allow: /
+
+# Disallow private/admin paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://zenalphamedia.com/sitemap.xml
