@@ -47,11 +47,8 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-2.5 mb-5 group">
-              <img src="/logo.png" alt="ZenAlpha Media Logo" className="w-8 h-8 object-contain" />
-              <span className="font-display font-bold text-xl tracking-tight text-white">
-                ZenAlpha <span className="text-primary-500">Media</span>
-              </span>
+            <Link to="/" className="flex items-center mb-5 group">
+              <img src="/logo.png" alt="ZenAlpha Media Logo" className="h-20 w-auto object-contain bg-white p-2 rounded-xl" />
             </Link>
             <p className="text-neutral-400 text-sm leading-relaxed mb-6">
               India's performance marketing agency for ambitious brands.

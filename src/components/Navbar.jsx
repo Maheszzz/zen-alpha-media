@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Phone, ArrowRight, Menu, X } from 'lucide-react'
 
+
 const navLinks = [
   { name: 'Services',     path: '/services' },
   { name: 'About Us',     path: '/about' },
@@ -35,17 +36,9 @@ export default function Navbar() {
       }`}>
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex items-center justify-between gap-6">
 
-          {/* Logo with Subtitle */}
-          <Link to="/" className="flex items-center gap-2.5 flex-shrink-0 group">
-            <img src="/logo.png" alt="ZenAlpha Media" className="w-9 h-9 object-contain" />
-            <div className="flex flex-col">
-              <span className="font-display font-black text-lg leading-none tracking-tight text-neutral-900">
-                ZenAlpha <span className="text-primary-500">Media</span>
-              </span>
-              <span className="text-[9px] font-extrabold tracking-widest text-neutral-400 uppercase mt-0.5">
-                Performance Marketing Agency
-              </span>
-            </div>
+          {/* Logo */}
+          <Link to="/" className="flex items-center flex-shrink-0 group">
+            <img src="/logo.png" alt="ZenAlpha Media" className="h-20 md:h-24 w-auto object-contain mix-blend-multiply -my-4 md:-my-6" />
           </Link>
 
           {/* Desktop Navigation Links */}
