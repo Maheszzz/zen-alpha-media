@@ -2,6 +2,7 @@ import Hero from '../components/Hero'
 import PartnerBadges from '../components/PartnerBadges'
 import Metrics from '../components/Metrics'
 import Services from '../components/Services'
+import WhyZenAlpha from '../components/WhyZenAlpha'
 import Process from '../components/Process'
 import CaseStudies from '../components/CaseStudies'
 import Testimonials from '../components/Testimonials'
@@ -30,6 +31,9 @@ export default function Home() {
 
       {/* 4. Services Grid ("WHAT WE DO") */}
       <Services />
+
+      {/* 4.5 Why ZenAlpha Section */}
+      <WhyZenAlpha />
 
       {/* 5. Process Steps ("OUR APPROACH") */}
       <Process />

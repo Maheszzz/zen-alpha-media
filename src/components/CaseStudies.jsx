@@ -5,33 +5,49 @@ const clientNames = [
   'iuLearn', 'TechFin', 'Luxe Wear', 'GrowthBox', 'ShopNow', 'HealthPlus', 'BuildCo', 'EduLearn'
 ]
 
+import { Target, Search, Laptop } from 'lucide-react'
+
 const caseStudies = [
   {
-    client: 'TechFin App',
-    industry: 'FinTech',
-    badgeMetric: '250%',
-    badgeLabel: 'Increase in ROAS',
-    description: 'Scaled user acquisition across Meta and Google, reducing CPA by 40% in just 3 months while tripling qualified leads.',
+    client: 'B2B SaaS Provider',
+    industry: 'SEO Growth',
+    badgeMetric: '+143%',
+    badgeLabel: 'Organic Traffic',
+    description: 'Complete technical SEO overhaul and content strategy implementation resulting in massive visibility gains.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
-    icon: BarChart2,
+    icon: Search,
     stats: [
-      { label: 'INCREASE IN ROAS', value: '250%' },
-      { label: 'CPA REDUCED BY',   value: '40%' },
-      { label: 'QUALIFIED LEADS',  value: '3X' },
+      { label: 'ORGANIC TRAFFIC', value: '+143%' },
+      { label: 'PAGE 1 KEYWORDS', value: '27 → 81' },
+      { label: 'LEADS', value: '+62%' },
     ],
   },
   {
-    client: 'Luxe Wear',
-    industry: 'E-Commerce',
-    badgeMetric: '3.2x',
-    badgeLabel: 'Revenue Growth',
-    description: 'Overhauled Google Shopping & Performance Max architecture, resulting in record-breaking Diwali sales.',
+    client: 'Real Estate Developer',
+    industry: 'Google Ads',
+    badgeMetric: '-45%',
+    badgeLabel: 'Cost Per Lead',
+    description: 'Restructured Google Ads campaigns to focus on high-intent search terms and improved ad relevance.',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
-    icon: ShoppingBag,
+    icon: Target,
     stats: [
-      { label: 'REVENUE GROWTH', value: '3.2x' },
-      { label: 'ROAS ACHIEVED',  value: '620%' },
-      { label: 'SALES INCREASE', value: '178%' },
+      { label: 'AD SPEND', value: '-15%' },
+      { label: 'LEADS', value: '+110%' },
+      { label: 'CPL', value: '⬇ 45%' },
+    ],
+  },
+  {
+    client: 'E-Commerce Brand',
+    industry: 'Website Transformation',
+    badgeMetric: '3.2x',
+    badgeLabel: 'Conversion Rate',
+    description: 'Redesigned landing pages for maximum speed, user experience, and mobile responsiveness.',
+    image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1200&auto=format&fit=crop',
+    icon: Laptop,
+    stats: [
+      { label: 'LOAD SPEED', value: '4s → 1.2s' },
+      { label: 'CONVERSION', value: '1.2% → 3.8%' },
+      { label: 'REVENUE', value: '+215%' },
     ],
   },
 ]
@@ -130,8 +146,8 @@ export default function CaseStudies() {
           </div>
         </div>
         
-        {/* ── 2 PRO CASE STUDY CARDS GRID ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        {/* ── 3 PRO CASE STUDY CARDS GRID ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           {caseStudies.map((study, i) => {
             const IconComponent = study.icon
             return (
@@ -173,26 +189,14 @@ export default function CaseStudies() {
                   </p>
 
                   {/* Bottom Micro-Metrics Bar (3 columns inside card) */}
-                  <div className="pt-6 border-t border-neutral-100 grid grid-cols-3 gap-3 items-center">
+                  <div className="pt-6 border-t border-neutral-100 flex flex-col gap-3">
                     {study.stats.map((stat, idx) => (
-                      <div
-                        key={idx}
-                        className={`flex flex-col ${idx > 0 ? 'border-l border-neutral-200 pl-4' : ''}`}
-                      >
-                        <div className="flex items-center gap-2.5">
-                          {idx === 0 && (
-                            <div className="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0">
-                              <IconComponent className="w-4 h-4 text-primary-500" />
-                            </div>
-                          )}
-                          <div>
-                            <div className="text-[10px] font-extrabold text-primary-500 uppercase tracking-wider leading-tight">
-                              {stat.label}
-                            </div>
-                            <div className="text-xl sm:text-2xl font-display font-black text-neutral-900 leading-none mt-1">
-                              {stat.value}
-                            </div>
-                          </div>
+                      <div key={idx} className="flex items-center justify-between">
+                        <div className="text-[10px] font-extrabold text-primary-500 uppercase tracking-wider">
+                          {stat.label}
+                        </div>
+                        <div className="text-lg font-display font-black text-neutral-900">
+                          {stat.value}
                         </div>
                       </div>
                     ))}

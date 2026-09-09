@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Mail, MapPin, Phone, X, Globe, Share2, Rss, ArrowRight } from 'lucide-react'
+import { Mail, MapPin, Phone, X, Globe, Share2, Rss, ArrowRight, MessageCircle } from 'lucide-react'
 
 const serviceLinks = [
   { name: 'Google Ads Management', href: '/services/google-ads' },
@@ -76,6 +76,10 @@ export default function Footer() {
               <a href="tel:+919999999999" className="flex items-center gap-2.5 text-neutral-400 hover:text-white transition-colors">
                 <Phone className="w-4 h-4 text-primary-500 flex-shrink-0" />
                 +91 99999 99999
+              </a>
+              <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-neutral-400 hover:text-green-500 transition-colors">
+                <MessageCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                Chat on WhatsApp
               </a>
               <div className="flex items-start gap-2.5 text-neutral-400">
                 <MapPin className="w-4 h-4 text-primary-500 flex-shrink-0 mt-0.5" />

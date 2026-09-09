@@ -1,4 +1,4 @@
-import { Compass, GitBranch, Rocket, BarChart3, ArrowRight } from 'lucide-react'
+import { Compass, GitBranch, Rocket, BarChart3, TrendingUp, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const steps = [
@@ -6,25 +6,31 @@ const steps = [
     number: '01',
     icon: Compass,
     title: 'Discover',
-    desc: 'We understand your business, audience, and growth goals.',
+    desc: 'Understand your business, competitors and goals.',
   },
   {
     number: '02',
     icon: GitBranch,
     title: 'Strategize',
-    desc: 'We craft a data-driven strategy tailored to your business.',
+    desc: 'Build a customized digital growth strategy.',
   },
   {
     number: '03',
     icon: Rocket,
     title: 'Execute',
-    desc: 'We launch high-performing campaigns that deliver ROI.',
+    desc: 'SEO, content, ads, web and conversion optimization.',
   },
   {
     number: '04',
     icon: BarChart3,
-    title: 'Optimize',
-    desc: 'We analyze, optimize, and scale for maximum revenue.',
+    title: 'Measure',
+    desc: 'Track traffic, leads, conversions and ROI.',
+  },
+  {
+    number: '05',
+    icon: TrendingUp,
+    title: 'Improve',
+    desc: 'Continuously optimize based on performance data.',
   },
 ]
 
@@ -79,7 +85,7 @@ export default function Process() {
             {/* Horizontal Red Dotted Connecting Line (Desktop) */}
             <div className="hidden md:block absolute top-[52px] left-[10%] right-[10%] h-[2px] border-t-2 border-dashed border-red-200 z-0" />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 lg:gap-6 relative z-10">
               {steps.map((step) => {
                 const IconComponent = step.icon
                 return (

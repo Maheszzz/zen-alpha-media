@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Phone, ArrowRight, Menu, X } from 'lucide-react'
+import { Phone, ArrowRight, Menu, X, MessageCircle } from 'lucide-react'
 
 
 const navLinks = [
@@ -64,18 +64,20 @@ export default function Navbar() {
           {/* Right Header Actions */}
           <div className="hidden lg:flex items-center gap-5 flex-shrink-0">
             <a
-              href="mailto:hello@zenalphamedia.com"
-              className="flex items-center gap-1.5 text-[13.5px] font-semibold text-neutral-700 hover:text-primary-500 transition-colors"
+              href="https://wa.me/919999999999"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[13.5px] font-semibold text-green-600 hover:text-green-700 transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-primary-500 fill-primary-500" />
-              hello@zenalphamedia.com
+              <MessageCircle className="w-4 h-4 fill-green-600" />
+              Chat With Our Marketing Team
             </a>
             <Link
               to="/contact"
               id="nav-cta-btn"
               className="btn-red min-h-[42px] rounded-full px-6 py-2 text-[13.5px] font-bold shadow-md shadow-red-500/20 hover:shadow-lg hover:shadow-red-500/30 whitespace-nowrap"
             >
-              Get a Free Quote <ArrowRight className="w-3.5 h-3.5" />
+              Get a Free Consultation <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
@@ -115,7 +117,7 @@ export default function Navbar() {
               to="/contact"
               className="btn-red mt-4 rounded-full px-10 py-4 text-base min-h-[52px] shadow-lg shadow-red-500/30"
             >
-              Get a Free Quote <ArrowRight className="w-4 h-4" />
+              Get a Free Consultation <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
         )}

@@ -1,31 +1,55 @@
 import { motion } from 'framer-motion'
-import { Target, Search, Edit3, BarChart2, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Search, Bot, FileText, Target, Laptop, Share2, Mail, MousePointerClick, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const services = [
   {
-    id: 'performance-marketing',
-    icon: Target,
-    title: 'Performance Marketing',
-    desc: 'ROI-focused ad campaigns across Google, Meta, YouTube & more.',
-  },
-  {
     id: 'seo',
     icon: Search,
-    title: 'Search Engine Optimization',
-    desc: 'Rank higher, get discovered, and drive organic growth that lasts.',
+    title: 'SEO',
+    desc: 'Technical SEO, on-page optimization, keyword strategy and authority building.',
   },
   {
-    id: 'creative-branding',
-    icon: Edit3,
-    title: 'Creative & Branding',
-    desc: 'Crafting powerful brands and creatives that connect and convert.',
+    id: 'aeo-geo',
+    icon: Bot,
+    title: 'AEO & GEO',
+    desc: 'Get discovered across AI-powered search and generative engines.',
   },
   {
-    id: 'analytics',
-    icon: BarChart2,
-    title: 'Analytics & Reporting',
-    desc: 'Real-time insights and clear reporting to track what truly matters.',
+    id: 'content-marketing',
+    icon: FileText,
+    title: 'Content Marketing',
+    desc: 'SEO blogs, website content, landing pages and conversion-focused copy.',
+  },
+  {
+    id: 'paid-ads',
+    icon: Target,
+    title: 'Google & Meta Ads',
+    desc: 'Targeted campaigns designed to generate qualified leads and sales.',
+  },
+  {
+    id: 'web-development',
+    icon: Laptop,
+    title: 'Web Development',
+    desc: 'Fast, modern, SEO-friendly websites built for growth.',
+  },
+  {
+    id: 'social-media',
+    icon: Share2,
+    title: 'Social Media Management',
+    desc: 'Creative content and strategic social media management to build your brand.',
+  },
+  {
+    id: 'email-automation',
+    icon: Mail,
+    title: 'Email Automation',
+    desc: 'Automated campaigns that nurture leads and improve customer retention.',
+  },
+  {
+    id: 'cro',
+    icon: MousePointerClick,
+    title: 'Conversion Optimization',
+    desc: 'Turn more website visitors into enquiries, leads and customers.',
   },
 ]
 
@@ -53,8 +77,7 @@ export default function Services() {
             </div>
             
             <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-display font-extrabold text-neutral-900 tracking-tight leading-[1.12] mb-4">
-              Performance Solutions <br />
-              That Deliver
+              Our Digital Growth Services
             </h2>
             
             <div className="w-12 h-[2px] bg-red-200 mb-6" />

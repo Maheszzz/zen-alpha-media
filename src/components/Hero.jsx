@@ -49,10 +49,10 @@ export default function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="font-display font-black tracking-tight text-neutral-900 leading-[1.05] mb-6 text-4xl sm:text-5xl lg:text-[58px] xl:text-[64px]"
+              className="font-display font-black tracking-tight text-neutral-900 leading-[1.05] mb-6 text-4xl sm:text-5xl lg:text-[52px] xl:text-[56px]"
             >
               <span className="relative inline-block pb-1">
-                We Drive Growth.
+                Grow Your Business With
                 <motion.span
                   initial={{ width: 0 }}
                   animate={{ width: '4rem' }}
@@ -61,7 +61,7 @@ export default function Hero() {
                 />
               </span>
               <br />
-              <span className="text-primary-500">You Reap Results.</span>
+              <span className="text-primary-500">Smarter Digital Marketing.</span>
             </motion.h1>
 
             {/* Description */}
@@ -70,9 +70,9 @@ export default function Hero() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="text-neutral-600 text-sm sm:text-base leading-relaxed mb-8 max-w-[430px] font-normal"
+              className="text-neutral-600 text-sm sm:text-base leading-relaxed mb-8 max-w-[480px] font-normal"
             >
-              Data-driven performance marketing that transforms ad spend into measurable, scalable revenue across Google, Meta, SEO, and beyond.
+              SEO, AEO, Paid Advertising, Content & Web Solutions designed to generate visibility, leads and measurable growth.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -88,7 +88,7 @@ export default function Hero() {
                 id="hero-primary-cta"
                 className="inline-flex items-center gap-2.5 bg-primary-500 text-white font-bold text-sm px-7 py-3.5 rounded-full transition-all duration-200 hover:bg-primary-600 shadow-md shadow-red-500/25 hover:shadow-lg hover:shadow-red-500/35 animate-glow"
               >
-                Get a Free Audit <ArrowRight className="w-4 h-4" />
+                Get a Free Consultation <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 to="/services"
@@ -99,9 +99,28 @@ export default function Hero() {
               </Link>
             </motion.div>
 
-            {/* Social Proof */}
+            {/* Mini Service Bar */}
             <motion.div
               custom={4}
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-[13px] font-semibold text-neutral-500 mb-8"
+            >
+              <span>SEO</span>
+              <span className="text-neutral-300">|</span>
+              <span>AEO & GEO</span>
+              <span className="text-neutral-300">|</span>
+              <span>Google Ads</span>
+              <span className="text-neutral-300">|</span>
+              <span>Meta Ads</span>
+              <span className="text-neutral-300">|</span>
+              <span>Web Development</span>
+            </motion.div>
+
+            {/* Social Proof */}
+            <motion.div
+              custom={5}
               variants={fadeUp}
               initial="hidden"
               animate="visible"
