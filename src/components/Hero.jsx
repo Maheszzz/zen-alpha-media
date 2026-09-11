@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, CheckCircle2, ShieldCheck, TrendingUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const avatarUrls = [
@@ -72,12 +72,31 @@ export default function Hero() {
               animate="visible"
               className="text-neutral-600 text-sm sm:text-base leading-relaxed mb-8 max-w-[480px] font-normal"
             >
-              SEO, AEO, Paid Advertising, Content & Web Solutions designed to generate visibility, leads and measurable growth.
+              We help ambitious Indian businesses turn search, social, content and websites into a predictable pipeline of qualified leads, booked calls and revenue.
             </motion.p>
+
+            <motion.div
+              custom={3}
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8 max-w-[560px]"
+            >
+              {[
+                { icon: TrendingUp, label: 'Performance-first strategy' },
+                { icon: ShieldCheck, label: 'Transparent reporting' },
+                { icon: CheckCircle2, label: 'Senior-led execution' },
+              ].map(({ icon: Icon, label }) => (
+                <div key={label} className="flex items-center gap-2 rounded-xl border border-neutral-200 bg-white px-3 py-2.5 shadow-sm">
+                  <Icon className="h-4 w-4 shrink-0 text-primary-500" />
+                  <span className="text-[12px] font-bold leading-snug text-neutral-700">{label}</span>
+                </div>
+              ))}
+            </motion.div>
 
             {/* CTA Buttons */}
             <motion.div
-              custom={3}
+              custom={4}
               variants={fadeUp}
               initial="hidden"
               animate="visible"
@@ -101,7 +120,7 @@ export default function Hero() {
 
             {/* Mini Service Bar */}
             <motion.div
-              custom={4}
+              custom={5}
               variants={fadeUp}
               initial="hidden"
               animate="visible"
@@ -109,7 +128,7 @@ export default function Hero() {
             >
               <span>SEO</span>
               <span className="text-neutral-300">|</span>
-              <span>AEO & GEO</span>
+              <span>AI Search</span>
               <span className="text-neutral-300">|</span>
               <span>Google Ads</span>
               <span className="text-neutral-300">|</span>
@@ -120,7 +139,7 @@ export default function Hero() {
 
             {/* Social Proof */}
             <motion.div
-              custom={5}
+              custom={6}
               variants={fadeUp}
               initial="hidden"
               animate="visible"

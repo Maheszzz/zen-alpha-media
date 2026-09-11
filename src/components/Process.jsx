@@ -6,31 +6,31 @@ const steps = [
     number: '01',
     icon: Compass,
     title: 'Discover',
-    desc: 'Understand your business, competitors and goals.',
+    desc: 'Audit your website, tracking, competitors, funnel and current acquisition costs.',
   },
   {
     number: '02',
     icon: GitBranch,
     title: 'Strategize',
-    desc: 'Build a customized digital growth strategy.',
+    desc: 'Prioritize channels, offers, landing pages, budgets, keywords and conversion milestones.',
   },
   {
     number: '03',
     icon: Rocket,
     title: 'Execute',
-    desc: 'SEO, content, ads, web and conversion optimization.',
+    desc: 'Launch campaigns, content, landing pages and tracking with clear sprint ownership.',
   },
   {
     number: '04',
     icon: BarChart3,
     title: 'Measure',
-    desc: 'Track traffic, leads, conversions and ROI.',
+    desc: 'Review traffic quality, rankings, leads, cost per lead, conversion rate and ROI.',
   },
   {
     number: '05',
     icon: TrendingUp,
     title: 'Improve',
-    desc: 'Continuously optimize based on performance data.',
+    desc: 'Refine creative, budgets, pages, search intent and follow-up flows every week.',
   },
 ]
 

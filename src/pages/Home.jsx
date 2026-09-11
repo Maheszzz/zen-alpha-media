@@ -8,6 +8,7 @@ import CaseStudies from '../components/CaseStudies'
 import Testimonials from '../components/Testimonials'
 import FAQ from '../components/FAQ'
 import BlogPreview from '../components/BlogPreview'
+import LeadMagnet from '../components/LeadMagnet'
 import { useSEO } from '../hooks/useSEO'
 
 export default function Home() {
@@ -47,7 +48,10 @@ export default function Home() {
       {/* 8. FAQ Accordion */}
       <FAQ />
 
-      {/* 9. Blog Preview */}
+      {/* 9. Conversion CTA */}
+      <LeadMagnet />
+
+      {/* 10. Blog Preview */}
       <BlogPreview />
     </>
   )

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Mail, MapPin, Phone, X, Globe, Share2, Rss, ArrowRight, MessageCircle } from 'lucide-react'
-
+ 
 const serviceLinks = [
   { name: 'Google Ads Management', href: '/services/google-ads' },
   { name: 'Meta Advertising',      href: '/services/meta-ads' },
@@ -16,9 +16,9 @@ const companyLinks = [
 ]
 
 const legalLinks = [
-  { name: 'Privacy Policy',   href: '#' },
-  { name: 'Terms of Service', href: '#' },
-  { name: 'Cookie Policy',    href: '#' },
+  { name: 'Privacy Policy',   href: '/contact' },
+  { name: 'Terms of Service', href: '/contact' },
+  { name: 'Cookie Policy',    href: '/contact' },
 ]
 
 const socialLinks = [
@@ -186,10 +186,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-500">
           <p>© {new Date().getFullYear()} ZenAlpha Media. All rights reserved.</p>
-          <p className="text-center">Built with ❤️ in Chennai, India</p>
+          <p className="text-center">Built in Chennai, India</p>
           <div className="flex gap-6">
-            <Link to="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="#" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link to="/contact" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/contact" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

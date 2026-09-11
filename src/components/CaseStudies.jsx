@@ -1,19 +1,17 @@
-import { motion } from 'framer-motion'
-import { ArrowRight, TrendingUp, ChevronLeft, ChevronRight, BarChart2, ShoppingBag } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { ArrowRight, TrendingUp, Target, Search, Laptop } from 'lucide-react'
  
 const clientNames = [
-  'iuLearn', 'TechFin', 'Luxe Wear', 'GrowthBox', 'ShopNow', 'HealthPlus', 'BuildCo', 'EduLearn'
+  'Education', 'SaaS', 'Fashion', 'Healthcare', 'Real Estate', 'E-commerce', 'Professional Services', 'Local Brands'
 ]
-
-import { Target, Search, Laptop } from 'lucide-react'
 
 const caseStudies = [
   {
-    client: 'B2B SaaS Provider',
+    client: 'B2B SaaS Pipeline Growth',
     industry: 'SEO Growth',
     badgeMetric: '+143%',
     badgeLabel: 'Organic Traffic',
-    description: 'Complete technical SEO overhaul and content strategy implementation resulting in massive visibility gains.',
+    description: 'Technical SEO cleanup, buying-intent content and conversion-focused service pages helped the brand turn organic search into qualified demo requests.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
     icon: Search,
     stats: [
@@ -23,11 +21,11 @@ const caseStudies = [
     ],
   },
   {
-    client: 'Real Estate Developer',
+    client: 'Real Estate Lead Generation',
     industry: 'Google Ads',
     badgeMetric: '-45%',
     badgeLabel: 'Cost Per Lead',
-    description: 'Restructured Google Ads campaigns to focus on high-intent search terms and improved ad relevance.',
+    description: 'Campaign restructuring, location-level keyword control and sharper landing page messaging reduced enquiry costs while improving lead quality.',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
     icon: Target,
     stats: [
@@ -37,11 +35,11 @@ const caseStudies = [
     ],
   },
   {
-    client: 'E-Commerce Brand',
+    client: 'E-Commerce Website Growth',
     industry: 'Website Transformation',
     badgeMetric: '3.2x',
     badgeLabel: 'Conversion Rate',
-    description: 'Redesigned landing pages for maximum speed, user experience, and mobile responsiveness.',
+    description: 'A faster mobile-first buying experience, better product storytelling and improved offer placement helped turn paid traffic into revenue.',
     image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1200&auto=format&fit=crop',
     icon: Laptop,
     stats: [
@@ -125,9 +123,9 @@ export default function CaseStudies() {
             </svg>
             
             {/* View All Case Studies Pill Button */}
-            <button className="relative z-10 inline-flex items-center gap-2.5 bg-white text-primary-500 border border-primary-500/50 font-bold text-xs sm:text-sm px-6 py-3 rounded-full hover:bg-primary-500 hover:text-white transition-all duration-200 shadow-sm group">
-              View All Case Studies <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            <Link to="/contact" className="relative z-10 inline-flex items-center gap-2.5 bg-white text-primary-500 border border-primary-500/50 font-bold text-xs sm:text-sm px-6 py-3 rounded-full hover:bg-primary-500 hover:text-white transition-all duration-200 shadow-sm group">
+              Request Similar Results <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
           
         </div>
@@ -149,7 +147,6 @@ export default function CaseStudies() {
         {/* ── 3 PRO CASE STUDY CARDS GRID ── */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           {caseStudies.map((study, i) => {
-            const IconComponent = study.icon
             return (
               <div
                 key={i}
@@ -177,7 +174,7 @@ export default function CaseStudies() {
                     </div>
                   </div>
                 </div>
-
+                
                 {/* Card Body */}
                 <div className="p-8 sm:p-9 flex flex-col flex-grow">
                   <h3 className="text-2xl font-display font-extrabold text-neutral-900 mb-3 group-hover:text-primary-500 transition-colors">
@@ -187,7 +184,7 @@ export default function CaseStudies() {
                   <p className="text-neutral-600 text-sm sm:text-base leading-relaxed mb-8 flex-grow">
                     {study.description}
                   </p>
-
+                  
                   {/* Bottom Micro-Metrics Bar (3 columns inside card) */}
                   <div className="pt-6 border-t border-neutral-100 flex flex-col gap-3">
                     {study.stats.map((stat, idx) => (
@@ -202,28 +199,21 @@ export default function CaseStudies() {
                     ))}
                   </div>
                 </div>
-
+                 
               </div>
             )
           })}
         </div>
         
-        {/* ── BOTTOM CAROUSEL CONTROLS ── */}
-        <div className="flex justify-center items-center gap-3">
-          <button
-            aria-label="Previous Case Study"
-            className="w-10 h-10 rounded-full border border-neutral-200 bg-white flex items-center justify-center text-neutral-500 hover:text-primary-500 hover:border-red-200 transition-colors shadow-sm"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button
-            aria-label="Next Case Study"
-            className="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center shadow-md shadow-red-500/25 hover:bg-primary-600 transition-colors"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 rounded-2xl bg-neutral-50 border border-neutral-200 p-6">
+          <p className="text-sm font-semibold text-neutral-700 text-center">
+            Want numbers like these for your business? Start with a free growth audit.
+          </p>
+          <Link to="/contact" className="btn-red rounded-full px-6 py-3 text-sm">
+            Get Free Audit <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
-
+        
       </div>
     </section>
   )

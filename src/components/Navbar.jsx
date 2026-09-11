@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Phone, ArrowRight, Menu, X, MessageCircle } from 'lucide-react'
+import { ArrowRight, Menu, X, MessageCircle } from 'lucide-react'
 
 
 const navLinks = [

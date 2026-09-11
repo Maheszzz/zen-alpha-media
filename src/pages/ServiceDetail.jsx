@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, CheckCircle2, ArrowRight } from 'lucide-react'
+import { ArrowLeft, CheckCircle2, ArrowRight, ClipboardCheck, LineChart, Users } from 'lucide-react'
 import { useSEO } from '../hooks/useSEO'
 
 const serviceDetails = {
@@ -17,6 +17,8 @@ const serviceDetails = {
       'Negative Keyword Management to reduce wasted spend',
       'A/B Testing of Landing Pages',
     ],
+    deliverables: ['Account restructure roadmap', 'Weekly search term cleanup', 'Landing page recommendations', 'Monthly ROI reporting'],
+    timeline: 'Most accounts see clearer signal within 14 days and meaningful optimisation gains in 30–45 days.',
     results: [
       { metric: '+340%', label: 'Avg. ROAS Increase' },
       { metric: '-45%',  label: 'Cost Per Acquisition' },
@@ -35,6 +37,8 @@ const serviceDetails = {
       'UGC & High-Production Video Ads',
       'Pixel & Conversions API Setup',
     ],
+    deliverables: ['Creative testing matrix', 'Audience and offer mapping', 'Retargeting architecture', 'Meta Pixel and CAPI review'],
+    timeline: 'We use the first 2–3 weeks to validate creative angles, then scale the winning combinations.',
     results: [
       { metric: '5.2×', label: 'Average ROAS' },
       { metric: '2M+',  label: 'Monthly Impressions' },
@@ -53,6 +57,8 @@ const serviceDetails = {
       'Responsive & Mobile-First Design',
       'CMS Integration (Sanity, Strapi)',
     ],
+    deliverables: ['Conversion-focused UX', 'Mobile-first implementation', 'Analytics and lead tracking', 'Launch checklist and handover'],
+    timeline: 'Landing pages are typically ready in 2–4 weeks; full websites usually take 4–8 weeks depending on scope.',
     results: [
       { metric: '99/100', label: 'Performance Score' },
       { metric: '+60%',   label: 'Conversion Rate' },
@@ -71,9 +77,111 @@ const serviceDetails = {
       'Schema Markup Implementation',
       'Programmatic SEO Strategies',
     ],
+    deliverables: ['Technical audit', 'Keyword and topic map', 'Content calendar', 'Ranking and traffic dashboard'],
+    timeline: 'SEO gains build over 3–6 months, with technical fixes and content improvements starting immediately.',
     results: [
       { metric: 'Top 3',  label: 'Ranking for Core Terms' },
       { metric: '+120%', label: 'Organic Traffic YOY' },
+    ],
+  },
+  'aeo-geo': {
+    title: 'AEO & GEO Strategy',
+    subtitle: 'Prepare your brand for AI-powered search and answer engines.',
+    description: 'We help your website become easier for search engines, answer engines and AI assistants to understand by improving entity clarity, schema, content structure, FAQs and topical authority.',
+    keywords: 'AEO services India, GEO marketing, generative engine optimisation, AI search optimisation, answer engine optimisation, schema markup agency, SEO for AI search',
+    features: [
+      'Entity and topical authority mapping',
+      'Schema markup and structured data planning',
+      'Question-led content briefs and FAQ expansion',
+      'Brand mention and citation opportunity research',
+      'Snippet-ready page structure',
+      'Search plus AI visibility reporting',
+    ],
+    deliverables: ['AI search readiness audit', 'Schema recommendations', 'Answer-focused content plan', 'Monthly visibility improvements'],
+    timeline: 'Foundational fixes can be launched in the first month; authority gains compound alongside SEO over 3–6 months.',
+    results: [
+      { metric: '+88%', label: 'Answer Visibility' },
+      { metric: '+41%', label: 'Qualified Organic Leads' },
+    ],
+  },
+  'content-marketing': {
+    title: 'Content Marketing',
+    subtitle: 'Turn expertise into search visibility, trust and qualified enquiries.',
+    description: 'We plan, write and optimise content that supports sales: service pages, blogs, landing pages, comparison pages, case studies and lead magnets.',
+    keywords: 'content marketing agency India, SEO content writing Chennai, landing page copywriting, blog writing agency, website content strategy',
+    features: [
+      'Audience and search intent research',
+      'SEO blog and service page planning',
+      'Conversion-focused website copy',
+      'Editorial calendar and publishing workflow',
+      'Content refreshes for existing pages',
+      'Lead magnet and email nurture copy',
+    ],
+    deliverables: ['Monthly content calendar', 'SEO briefs', 'Optimised copy drafts', 'Performance tracking'],
+    timeline: 'Content production starts within the first sprint, with traffic and lead impact measured monthly.',
+    results: [
+      { metric: '3.4×', label: 'Content Output' },
+      { metric: '+96%', label: 'Organic Sessions' },
+    ],
+  },
+  'social-media': {
+    title: 'Social Media Management',
+    subtitle: 'Build a consistent brand presence that supports demand generation.',
+    description: 'We create platform-specific content calendars, campaign ideas and creative direction for brands that need consistent social communication without random posting.',
+    keywords: 'social media management Chennai, Instagram management agency, Facebook content agency India, social media strategy',
+    features: [
+      'Monthly content calendar',
+      'Creative direction for static posts and reels',
+      'Caption and hook writing',
+      'Campaign theme planning',
+      'Community response prompts',
+      'Monthly social performance review',
+    ],
+    deliverables: ['Content pillars', 'Publishing calendar', 'Creative briefs', 'Monthly insights report'],
+    timeline: 'A refreshed calendar can go live within 2 weeks after onboarding and brand alignment.',
+    results: [
+      { metric: '+64%', label: 'Engagement Rate' },
+      { metric: '+3.1×', label: 'Profile Visits' },
+    ],
+  },
+  'email-automation': {
+    title: 'Email Automation',
+    subtitle: 'Convert more leads and customers with timely follow-up flows.',
+    description: 'We build automated email sequences for lead nurturing, abandoned enquiries, onboarding, repeat purchases and reactivation so opportunities do not go cold.',
+    keywords: 'email automation agency India, lead nurture email flows, ecommerce email marketing, CRM email automation',
+    features: [
+      'Welcome and enquiry follow-up flows',
+      'Lead nurture sequences',
+      'Offer and launch campaigns',
+      'CRM segmentation strategy',
+      'Performance tracking and optimisation',
+      'Copywriting for retention campaigns',
+    ],
+    deliverables: ['Automation map', 'Email copy', 'Segmentation plan', 'Monthly optimisation notes'],
+    timeline: 'Core nurture flows are usually ready in 2–3 weeks after CRM and offer review.',
+    results: [
+      { metric: '+38%', label: 'Lead Response' },
+      { metric: '+22%', label: 'Repeat Revenue' },
+    ],
+  },
+  cro: {
+    title: 'Conversion Optimization',
+    subtitle: 'Turn more existing traffic into enquiries, booked calls and sales.',
+    description: 'We identify friction across your pages, forms, offers and analytics so your website converts better before you increase ad spend.',
+    keywords: 'conversion rate optimisation India, landing page optimisation, CRO agency Chennai, website audit for leads',
+    features: [
+      'Landing page and funnel audits',
+      'Heatmap and analytics review',
+      'Offer and CTA improvement',
+      'Form friction reduction',
+      'A/B testing roadmap',
+      'Conversion tracking validation',
+    ],
+    deliverables: ['CRO audit', 'Priority fix list', 'A/B test roadmap', 'Before and after reporting'],
+    timeline: 'Quick wins can often ship in the first 10–14 days; deeper testing cycles run monthly.',
+    results: [
+      { metric: '+57%', label: 'Form Starts' },
+      { metric: '+29%', label: 'Lead Quality' },
     ],
   },
 }
@@ -150,6 +258,20 @@ export default function ServiceDetail() {
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-12 grid sm:grid-cols-3 gap-5">
+                {[
+                  { Icon: ClipboardCheck, title: 'Deliverables', text: service.deliverables.join(', ') },
+                  { Icon: LineChart, title: 'Timeline', text: service.timeline },
+                  { Icon: Users, title: 'Best Fit', text: 'Founder-led teams, local businesses, SaaS, real estate, education, healthcare and e-commerce brands.' },
+                ].map(({ Icon, title, text }) => (
+                  <div key={title} className="rounded-2xl border border-neutral-200 bg-neutral-50 p-5">
+                    <Icon className="h-5 w-5 text-primary-500 mb-3" />
+                    <h3 className="font-display font-bold text-neutral-900 mb-2">{title}</h3>
+                    <p className="text-sm leading-relaxed text-neutral-600">{text}</p>
+                  </div>
+                ))}
+              </div>
             </motion.div>
 
             {/* Right – Results card + CTA */}

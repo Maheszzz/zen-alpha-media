@@ -6,25 +6,25 @@ const reasons = [
     num: '01',
     icon: BarChart,
     title: 'Data-Driven Strategy',
-    desc: 'Every campaign starts with research, analytics and measurable objectives.',
+    desc: 'Every engagement starts with market research, tracking cleanup, competitor analysis and measurable growth targets.',
   },
   {
     num: '02',
     icon: Filter,
     title: 'Full-Funnel Marketing',
-    desc: 'From attracting visitors to converting them into customers.',
+    desc: 'We connect awareness, lead capture, nurture and conversion so channels support each other instead of operating in silos.',
   },
   {
     num: '03',
     icon: Bot,
     title: 'SEO + AI Search Ready',
-    desc: 'Optimize your brand for traditional search as well as emerging AI search experiences.',
+    desc: 'Your website is structured for Google, local search, featured snippets and emerging answer engines.',
   },
   {
     num: '04',
     icon: LineChart,
     title: 'Transparent Reporting',
-    desc: 'Track traffic, rankings, leads, conversions and campaign performance.',
+    desc: 'You see what changed, why it changed and what we are doing next through simple dashboards and monthly strategy calls.',
   },
 ]
 

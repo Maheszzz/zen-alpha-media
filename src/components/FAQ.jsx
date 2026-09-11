@@ -12,8 +12,8 @@ const faqs = [
     a: 'We work with brands spending a minimum of ₹1,50,000/month on ad spend. Our management fee is separate and depends on the scope. This threshold ensures we have enough data and budget to drive meaningful results.',
   },
   {
-    q: 'Do you work with businesses outside of Bangalore?',
-    a: 'Absolutely. While we\'re based in Chennai, we partner with brands across India and internationally. All communication, reporting, and strategy sessions happen remotely via Zoom and our live dashboards.',
+    q: 'Do you work with businesses outside of Chennai?',
+    a: 'Absolutely. While we\'re based in Chennai, we partner with brands across India and internationally. Communication, reporting, and strategy sessions can happen remotely through video calls and live dashboards.',
   },
   {
     q: 'What makes ZenAlpha different from other agencies?',
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: 'Do you require long-term contracts?',
-    a: 'Our standard engagement is a 3-month pilot followed by monthly rolling contracts. We don\'t believe in locking clients in — we earn your business every month. Most clients stay with us for 2+ years because the results speak for themselves.',
+    a: 'Our standard engagement is a 3-month pilot followed by monthly rolling contracts. We do not believe in locking clients in. We earn your business every month through clear work, reporting and results.',
   },
   {
     q: 'Can you handle both our Google Ads and Meta Ads?',
@@ -34,6 +34,14 @@ const faqs = [
   {
     q: 'How do you report results and how often?',
     a: 'You get a live Looker Studio dashboard with all key metrics updated daily. We send a weekly snapshot email and schedule a monthly strategy call to review performance, discuss wins, and plan the next month.',
+  },
+  {
+    q: 'Can you improve an existing website instead of rebuilding it?',
+    a: 'Yes. We first audit speed, mobile UX, tracking, SEO structure, calls to action and page copy. If the foundation is strong, we improve what exists. If a rebuild will be faster and cleaner, we explain why before any work starts.',
+  },
+  {
+    q: 'What do you need from us to get started?',
+    a: 'We usually need website access, analytics access, ad account access if relevant, your current offer details, target locations, ideal customer profile and business goals. If something is missing, we help you set it up.',
   },
 ]
 

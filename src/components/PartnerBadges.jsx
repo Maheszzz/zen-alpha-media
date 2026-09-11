@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion'
-
 export default function PartnerBadges() {
   return (
     <section className="py-10 bg-white border-t border-neutral-100">

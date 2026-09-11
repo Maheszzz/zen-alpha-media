@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const SITE_NAME = 'ZenAlpha Media';
 const BASE_URL = 'https://zenalphamedia.com';
 
 /**

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Search, Megaphone, Laptop, LineChart, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { Search, Megaphone, Laptop, LineChart, ArrowRight, CheckCircle2, Bot, FileText, Share2, Mail, MousePointerClick } from 'lucide-react'
 import { useSEO } from '../hooks/useSEO'
 
 const allServices = [
@@ -10,6 +10,7 @@ const allServices = [
     title: 'Google Ads Management',
     desc: 'Capture high-intent traffic with precision-targeted Search, Display, and Performance Max campaigns.',
     features: ['Search & Shopping', 'Performance Max', 'YouTube Ads', 'Remarketing'],
+    outcome: 'Lower wasted spend and stronger intent-led enquiry volume.',
   },
   {
     id: 'meta-ads',
@@ -17,6 +18,7 @@ const allServices = [
     title: 'Meta Advertising',
     desc: 'Scroll-stopping creatives and advanced audience targeting across Facebook and Instagram.',
     features: ['Facebook & Instagram', 'Advantage+ Campaigns', 'Creative Testing', 'Retargeting'],
+    outcome: 'Sharper creative testing and profitable social acquisition.',
   },
   {
     id: 'web-development',
@@ -24,6 +26,7 @@ const allServices = [
     title: 'Web Development',
     desc: 'Lightning-fast, conversion-optimised landing pages and full-scale websites.',
     features: ['React & Next.js', 'E-commerce Solutions', 'Landing Page Optimisation', 'Headless CMS'],
+    outcome: 'A faster site that looks premium and converts visitors into leads.',
   },
   {
     id: 'seo',
@@ -31,6 +34,47 @@ const allServices = [
     title: 'SEO & Content Strategy',
     desc: 'Dominate organic search rankings with data-driven content and technical SEO mastery.',
     features: ['Technical Audits', 'Keyword Strategy', 'Content Creation', 'Link Building'],
+    outcome: 'Compounding organic traffic, stronger local visibility and long-term authority.',
+  },
+  {
+    id: 'aeo-geo',
+    Icon: Bot,
+    title: 'AEO & GEO Strategy',
+    desc: 'Optimise your brand for answer engines, AI search experiences, snippets and entity-based discovery.',
+    features: ['Schema Planning', 'Answer-Led FAQs', 'Entity Mapping', 'AI Search Readiness'],
+    outcome: 'More visibility where users now ask questions, compare options and shortlist vendors.',
+  },
+  {
+    id: 'content-marketing',
+    Icon: FileText,
+    title: 'Content Marketing',
+    desc: 'Build topic authority with blogs, service pages, lead magnets and conversion-focused website copy.',
+    features: ['SEO Content Briefs', 'Landing Page Copy', 'Editorial Calendar', 'Content Refreshes'],
+    outcome: 'A useful content engine that supports both rankings and sales conversations.',
+  },
+  {
+    id: 'social-media',
+    Icon: Share2,
+    title: 'Social Media Management',
+    desc: 'Create consistent brand communication with content calendars, creative direction and platform-specific ideas.',
+    features: ['Monthly Calendar', 'Reels Direction', 'Caption Writing', 'Campaign Themes'],
+    outcome: 'A more active, credible social presence without random posting.',
+  },
+  {
+    id: 'email-automation',
+    Icon: Mail,
+    title: 'Email Automation',
+    desc: 'Nurture leads, recover abandoned enquiries and retain customers with automated email flows.',
+    features: ['Welcome Flows', 'Lead Nurture', 'CRM Segments', 'Retention Campaigns'],
+    outcome: 'More value from the leads and customers you already have.',
+  },
+  {
+    id: 'cro',
+    Icon: MousePointerClick,
+    title: 'Conversion Optimization',
+    desc: 'Improve pages, forms, CTAs and offers so more traffic becomes qualified pipeline.',
+    features: ['Landing Audits', 'Form Fixes', 'Offer Testing', 'Analytics Review'],
+    outcome: 'Better conversion rates before you spend more on traffic.',
   },
 ]
 
@@ -56,7 +100,7 @@ export default function Services() {
             transition={{ delay: 0.05 }}
             className="text-5xl md:text-7xl font-display font-black text-neutral-900 tracking-tight leading-tight mb-5"
           >
-            Digital capabilities designed{' '}
+            Digital growth systems designed{' '}
             <span className="text-primary-500">for scale.</span>
           </motion.h1>
           <motion.p
@@ -65,15 +109,22 @@ export default function Services() {
             transition={{ delay: 0.1 }}
             className="text-xl text-neutral-600 leading-relaxed max-w-xl"
           >
-            Everything you need to grow your business online — under one roof.
+            Strategy, acquisition, content, web and conversion support in one senior-led team.
           </motion.p>
+          <div className="mt-8 grid sm:grid-cols-3 gap-4 max-w-4xl">
+            {['Full-funnel strategy', 'Channel-specific execution', 'Reporting tied to leads and revenue'].map((item) => (
+              <div key={item} className="rounded-2xl bg-white border border-neutral-200 p-5 text-sm font-bold text-neutral-800 shadow-sm">
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Services grid */}
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {allServices.map((svc, i) => {
               const { Icon } = svc
               return (
@@ -91,7 +142,10 @@ export default function Services() {
                   </div>
 
                   <h2 className="text-2xl font-display font-bold text-neutral-900 mb-3">{svc.title}</h2>
-                  <p className="text-neutral-600 text-base mb-7 leading-relaxed">{svc.desc}</p>
+                  <p className="text-neutral-600 text-base mb-5 leading-relaxed">{svc.desc}</p>
+                  <p className="text-sm font-semibold text-primary-600 bg-primary-50 border border-primary-100 rounded-xl px-4 py-3 mb-7">
+                    {svc.outcome}
+                  </p>
 
                   {/* Features */}
                   <ul className="space-y-2.5 mb-8 flex-grow">
